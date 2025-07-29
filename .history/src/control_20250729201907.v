@@ -76,19 +76,7 @@ module control(
         Branch = 1;
         ALUOp  = `ALUOP_BEQ_BNE;
       end
-
-      `MIPS_SLTI: begin   // I.7
-        ALUSrc    = 1;
-        RegDst    = 0;
-        RegWrite  = 1;
-        MemtoReg  = 0;
-        MemRead   = 0;
-        MemWrite  = 0;
-        Branch    = 0;
-        Jump      = 0;
-        ALUOp     = 2'b10; // ou outro valor que represente SLTI com sinal na ula_ctrl
-      end
-
+// FALTA I.7
       `MIPS_SLTIU: begin   // I.8
         ALUSrc    = 1;     // usa imediato
         RegDst    = 0;     // escreve em rt

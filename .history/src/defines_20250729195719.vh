@@ -29,11 +29,11 @@
 `define ALU_SRL   4'b1001 // R.10
 `define ALU_SRA   4'b1010 // R.11
 
-`define ALU_SLLV  4'b1100 // R.12
-`define ALU_SRLV  4'b1101 // R.13
-`define ALU_SRAV  4'b1110 // R.14
+`define ALU_SLLV  4'b1100 // R.1
+`define ALU_SRLV  4'b1101 // R.1
+`define ALU_SRAV  4'b1110 // R.1
 
-`define ALU_JR    4'b0000 // R.15
+`define ALU_JR    4'b0000 // R.1
 
 //=========================================
 //        FUNCT FOR R-TYPE (6 bits)

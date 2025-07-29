@@ -76,8 +76,8 @@ module control(
         Branch = 1;
         ALUOp  = `ALUOP_BEQ_BNE;
       end
-
-      `MIPS_SLTI: begin   // I.7
+      
+      `MIPS_SLTI: begin  // I.7
         ALUSrc    = 1;
         RegDst    = 0;
         RegWrite  = 1;

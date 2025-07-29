@@ -1,43 +1,31 @@
-//=========================================
-//             MEMORY PARAMETERS
-//=========================================
+// MEMORY PARAMETERS
 `define IMEM_SIZE 1024  // Para instruções tipo-R
 `define DMEM_SIZE 1024  // Para instruções tipo-R
 
-//=========================================
-//             ALUOp CODES (2 bits)
-//=========================================
+// ALUOp códigos (2 bits)
 `define ALUOP_RTYPE         2'b10  // Para instruções tipo-R
 `define ALUOP_BEQ_BNE       2'b01  // Para beq e bne (SUB)
 `define ALUOP_LW_SW_ADDI    2'b00  // Para lw, sw e addi (ADD)
 `define ALUOP_ANDI_ORI_XORI 2'b11  // Para instruções ANDI, ORI, XORI
 
-//=========================================
-// ULA INTERNAL CODES - ARBITRARY (4 bits)
-//=========================================
-`define ALU_ADD   4'b0010 // R.1
-`define ALU_SUB   4'b0011 // R.2
+// Códigos internos da ULA - ARBITRARIOS (4 bits)
+`define ALU_JR    4'b0000
+`define ALU_OR    4'b0001
+`define ALU_ADD   4'b0010
+`define ALU_SUB   4'b0011
+`define ALU_AND   4'b0100
+`define ALU_XOR   4'b0101
+`define ALU_NOR   4'b0110
+`define ALU_SLT   4'b0111
+`define ALU_SLL   4'b1000
+`define ALU_SRL   4'b1001
+`define ALU_SRA   4'b1010
+`define ALU_SLTU  4'b1011
+`define ALU_SLLV  4'b1100
+`define ALU_SRLV  4'b1101
+`define ALU_SRAV  4'b1110
 
-`define ALU_AND   4'b0100 // R.3
-`define ALU_OR    4'b0001 // R.4
-`define ALU_XOR   4'b0101 // R.5
-`define ALU_NOR   4'b0110 // R.6
-
-`define ALU_SLT   4'b0111 // R.7
-`define ALU_SLTU  4'b1011 // R.8
-`define ALU_SLL   4'b1000 // R.9
-`define ALU_SRL   4'b1001 // R.10
-`define ALU_SRA   4'b1010 // R.11
-
-`define ALU_SLLV  4'b1100 // R.12
-`define ALU_SRLV  4'b1101 // R.13
-`define ALU_SRAV  4'b1110 // R.14
-
-`define ALU_JR    4'b0000 // R.15
-
-//=========================================
-//        FUNCT FOR R-TYPE (6 bits)
-//=========================================
+// Funct codes para instruções tipo-R (6 bits)
 `define FUNCT_ADD   6'b100000 // R.1 
 `define FUNCT_SUB   6'b100010 // R.2 
 
@@ -57,7 +45,6 @@
 `define FUNCT_SRAV  6'b000111 // R.14 
 
 `define FUNCT_JR    6'b001000 // R.15 
-
 //=========================================
 //          MIPS OPCODES (6 bits)
 //=========================================

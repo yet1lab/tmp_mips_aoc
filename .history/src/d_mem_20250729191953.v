@@ -2,11 +2,11 @@
 
 module d_mem(
   input clock,
-  input MemRead,
-  input MemWrite,
   input [31:0] address,
   input [31:0] WriteData,
-  output [31:0] ReadData
+  output [31:0] ReadData,
+  input MemWrite,
+  input MemRead
 );
   reg [31:0] mem [0:`IMEM_SIZE-1]; // Memória de 1K palavras
   

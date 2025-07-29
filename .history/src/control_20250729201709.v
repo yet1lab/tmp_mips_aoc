@@ -49,21 +49,21 @@ module control(
       `MIPS_ANDI: begin   // I.2
         ALUSrc   = 1;
         RegWrite = 1;
-        ExtOp    = 0;     // Extensão por zero
+        ExtOp    = 0;   // Extensão por zero
         ALUOp    = `ALUOP_ANDI_ORI_XORI;
       end
 
       `MIPS_ORI: begin    // I.3
         ALUSrc   = 1;
         RegWrite = 1;
-        ExtOp    = 0;     // Extensão por zero
+        ExtOp    = 0;   // Extensão por zero
         ALUOp    = `ALUOP_ANDI_ORI_XORI;
       end
 
       `MIPS_XORI: begin   //I.4
         ALUSrc   = 1;
         RegWrite = 1;
-        ExtOp    = 0;     // Extensão por zero
+        ExtOp    = 0;   // Extensão por zero
         ALUOp    = `ALUOP_ANDI_ORI_XORI;
       end
 
@@ -77,31 +77,19 @@ module control(
         ALUOp  = `ALUOP_BEQ_BNE;
       end
 
-      `MIPS_SLTI: begin   // I.7
-        ALUSrc    = 1;
-        RegDst    = 0;
-        RegWrite  = 1;
-        MemtoReg  = 0;
-        MemRead   = 0;
-        MemWrite  = 0;
-        Branch    = 0;
-        Jump      = 0;
-        ALUOp     = 2'b10; // ou outro valor que represente SLTI com sinal na ula_ctrl
-      end
-
       `MIPS_SLTIU: begin   // I.8
-        ALUSrc    = 1;     // usa imediato
-        RegDst    = 0;     // escreve em rt
+        ALUSrc    = 1;          // usa imediato
+        RegDst    = 0;          // escreve em rt
         RegWrite  = 1;
         MemtoReg  = 0;
         MemRead   = 0;
         MemWrite  = 0;
         Branch    = 0;
         Jump      = 0;
-        ALUOp     = 2'b11; // novo valor que indicará operação SLTIU na ula_ctrl
+        ALUOp     = 2'b11;     // novo valor que indicará operação SLTIU na ula_ctrl
       end
       
-      `MIPS_LUI: begin // I.9
+      `MIPS_LUI: begin  // I.9
         ALUSrc   = 1;
         RegWrite = 1;
         LuiEn    = 1;
@@ -119,7 +107,7 @@ module control(
         MemWrite = 1;
       end
 //================================================
-      `MIPS_J: begin   // J.1
+      `MIPS_J: begin  // J.1
         Jump = 1;
       end
 
@@ -129,8 +117,10 @@ module control(
         JalEn    = 1;
       end
 
+
+
       default: begin
-        // NÃO FAZ NADA
+        // Instruções não implementadas
       end
     endcase
   end
