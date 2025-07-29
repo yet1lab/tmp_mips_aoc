@@ -21,7 +21,7 @@ module test;
     reset = 1;     // start signal
     #10 reset = 0; // Reset in 10ns
     
-    #1000;     // emulate for 1000ns
+    #10000;     // emulate for 1000ns
     $finish;    // and stop
   end
 

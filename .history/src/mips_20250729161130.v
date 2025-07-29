@@ -13,7 +13,6 @@ module mips(
   wire [31:0] read_data1, read_data2, write_data;
   wire [31:0] sign_ext_out, alu_in2, dmem_out;
   wire [4:0] shamt = instruction[10:6];
-  wire [5:0] funct = instruction[5:0];
   
   // Sinais de controle expandidos
   wire RegDst, Jump, Branch, MemRead, MemtoReg, MemWrite, ALUSrc, RegWrite, Jr, ExtOp, JalEn, LuiEn;
@@ -57,7 +56,7 @@ module mips(
   wire [3:0] alu_control;
   ula_ctrl uctrl(
     .ALUOp(ALUOp),
-    .funct(funct),
+    .funct(instruction[5:0]),
     .OP_ula(alu_control)
   );
   
@@ -73,7 +72,7 @@ module mips(
   );
   
   // Memória de dados
-  d_mem dmem(
+  d_mem d_mem(
     .clock(clock),
     .address(ALUResultOut),
     .WriteData(read_data2),

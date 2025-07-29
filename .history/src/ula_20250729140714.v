@@ -8,7 +8,6 @@ module ula(
   output reg [31:0] result,
   output wire Zero_Flag
 );
-
   always @(*) begin
     case (OP)
       `ALU_ADD:   result = In1 + In2;

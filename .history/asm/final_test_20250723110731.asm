@@ -63,7 +63,7 @@
 	sw $s2, 8($s7) #salva 30 no endereco 48
 	sw $s3, 12($s7) #salva 40 no endereco 52 
 	
-	lw $t0, 12($0) #recuperto a 10 do endereco 12
+	lw $t0, 12($0) #recupera 10 do endereco 12
 	lw $t1, 16($0) #recupera 20 do endereco 16
 	add $t3, $t0, $t1 #resultado da soma deve ser 30
 	
