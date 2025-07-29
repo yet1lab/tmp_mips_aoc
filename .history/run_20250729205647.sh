@@ -25,7 +25,9 @@ compile(){
 }
 
 emulate(){
-    [ "${ASM:-0}" != "0" ] && \
+    touch $MEM
+
+    [ "${ASM:-0}" = "0" ] || \
         java -jar $MARS nc dump .text BinaryText $MEM $ASM
 
     vvp $BIN || exit 1     # run verilog
