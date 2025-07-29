@@ -1,0 +1,36 @@
+#!/bin/bash
+#=================================================
+#                PROJECT RUNNER
+#=================================================
+ASM_FILE="$1"
+DATA="sim/data.list"
+MARS="tools/Mars.jar"
+CMD=$1
+FILE=${2#asm/}; FILE=${FILE%.asm} # extract name
+#=================================================
+setup(){
+    sudo apt update
+    sudo apt install iverilog gtkwave
+
+    curl -L -o tools/Mars.jar "https://github.com/dpetersanderson/MARS/releases/download/v.4.5.1/Mars4_5.jar"
+}
+
+compile(){
+    [ "${FILE:-0}" != "0" ] && {          # if have argument
+        [ -f ${file} ] && java -jar ${MARS} nc dump .text HexText sim/${FILE}.list ${FILE}
+        cp ${file}.list ${DATA}
+    }
+}
+
+emulate(){
+    echo ok
+}
+
+#=================================================
+#               COMMAND SELECTION
+#=================================================
+case $1 in
+    -s) setup;;
+    -c) compile;;
+    -e) emulate;;
+esac    

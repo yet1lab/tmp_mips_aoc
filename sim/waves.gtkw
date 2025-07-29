@@ -1,0 +1,48 @@
+[*]
+[*] GTKWave Analyzer v3.3.118 (w)1999-2023 BSI
+[*] Tue Jul 29 14:26:09 2025
+[*]
+[dumpfile] "/home/yet1dev/Desktop/mips_aoc/sim/waves.vcd"
+[dumpfile_mtime] "Tue Jul 29 13:14:59 2025"
+[dumpfile_size] 56647
+[savefile] "/home/yet1dev/Desktop/mips_aoc/sim/waves.gtkw"
+[timestart] 0
+[size] 1518 770
+[pos] -1 -1
+*-15.000000 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] test.
+[treeopen] test.dut.
+[treeopen] test.dut.regs.
+[sst_width] 206
+[signals_width] 220
+[sst_expanded] 1
+[sst_vpaned_height] 220
+@24
+[color] 2
+test.dut.pc.PC[31:0]
+@29
+test.dut.pc.clock
+@28
+test.dut.ctrl.opcode[5:0]
+[color] 4
+test.dut.ctrl.funct[5:0]
+@200
+-
+@24
+[color] 2
+test.dut.regs.ReadAddr1[4:0]
+[color] 2
+test.dut.regs.ReadAddr2[4:0]
+@200
+-
+@420
+[color] 3
+test.dut.alu.In1[31:0]
+[color] 3
+test.dut.alu.In2[31:0]
+[color] 3
+test.dut.ext.imm[15:0]
+[color] 3
+test.dut.alu.result[31:0]
+[pattern_trace] 1
+[pattern_trace] 0
