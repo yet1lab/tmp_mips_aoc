@@ -27,7 +27,7 @@ module mips(
   
   // Lógica de seleção de registrador de escrita
   wire [4:0] write_reg = 
-    JalEn ? 5'b11111 :                                  // JAL usa $ra (reg 31)
+    JalEn ? 5'b11111 :                    // JAL usa $ra (reg 31)
     (RegDst ? instruction[15:11] : instruction[20:16]); // Padrão
   
   // Banco de registradores

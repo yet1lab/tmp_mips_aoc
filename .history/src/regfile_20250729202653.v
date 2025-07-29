@@ -19,7 +19,7 @@ module regfile(
   always @(posedge clock or posedge reset) begin
     if (reset) begin
       for (integer i = 0; i < 32; i++)
-        registers[i] <= 0;                // Zera todos os registradores
+        registers[i] <= 0;        // Zera todos os registradores
     end
     else if (RegWrite && WriteAddr != 0) begin
       registers[WriteAddr] <= WriteData;  // Escreve em rd (exceto $zero)

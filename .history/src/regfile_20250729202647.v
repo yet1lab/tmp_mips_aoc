@@ -15,11 +15,11 @@ module regfile(
   assign ReadData1 = (ReadAddr1 == 0) ? 32'b0 : registers[ReadAddr1];
   assign ReadData2 = (ReadAddr2 == 0) ? 32'b0 : registers[ReadAddr2];
 
-  // Escrita síncrona (reset assincrono)
+  // Escrita síncrona (reset asspincrono)
   always @(posedge clock or posedge reset) begin
     if (reset) begin
       for (integer i = 0; i < 32; i++)
-        registers[i] <= 0;                // Zera todos os registradores
+        registers[i] <= 0;        // Zera todos os registradores
     end
     else if (RegWrite && WriteAddr != 0) begin
       registers[WriteAddr] <= WriteData;  // Escreve em rd (exceto $zero)
