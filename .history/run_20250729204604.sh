@@ -6,7 +6,7 @@ CMD=$1  # get cmd option
 ASM=$2  # get asm code
 
 MARS="tools/Mars.jar"
-MEM="sim/memory.list"
+MEM="sim/mem.list"
 BIN="sim/machine.out"
 VCD="sim/waves.vcd"
 GTKW="sim/waves.gtkw"
@@ -29,7 +29,7 @@ emulate(){
         java -jar $MARS nc reset dump .text BinaryText $MEM $ASM
 
     vvp $BIN || exit 1     # run verilog
-    gtkwave $VCD $GTKW &   # Open gtkwave
+    gtkwave $VCD $GTKW &         # Open gtkwave
 }
 
 help(){

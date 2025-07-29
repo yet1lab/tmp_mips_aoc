@@ -6,8 +6,8 @@ CMD=$1  # get cmd option
 ASM=$2  # get asm code
 
 MARS="tools/Mars.jar"
-MEM="sim/memory.list"
-BIN="sim/machine.out"
+MEM="sim/mem.list"
+BIN="sim/bin.out"
 VCD="sim/waves.vcd"
 GTKW="sim/waves.gtkw"
 TestBench="sim/testbench.v"

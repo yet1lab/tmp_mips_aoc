@@ -6,11 +6,11 @@ CMD=$1  # get cmd option
 ASM=$2  # get asm code
 
 MARS="tools/Mars.jar"
-MEM="sim/memory.list"
-BIN="sim/machine.out"
+MEM="sim/mem.list"
+BIN="sim/bin.out"
 VCD="sim/waves.vcd"
 GTKW="sim/waves.gtkw"
-TestBench="sim/testbench.v"
+TestBench="sim/test.v"
 #=================================================
 setup(){
     sudo apt update
@@ -29,7 +29,7 @@ emulate(){
         java -jar $MARS nc reset dump .text BinaryText $MEM $ASM
 
     vvp $BIN || exit 1     # run verilog
-    gtkwave $VCD $GTKW &   # Open gtkwave
+    gtkwave $VCD $GTKW &         # Open gtkwave
 }
 
 help(){
