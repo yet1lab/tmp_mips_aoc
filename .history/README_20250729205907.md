@@ -1,0 +1,9 @@
+# Welcome Computer Archtecture Archive
+To run it, you need to run script `./run.sh`
+
+## Setup to test in Debian
+```sh
+$ ./run.sh -s                 # to setup
+$ ./run.sh -c                 # to compile
+$ ./run.sh -e {asm/file.asm}  # to emulate
+```
