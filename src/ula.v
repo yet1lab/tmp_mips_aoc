@@ -1,3 +1,6 @@
+//=========================================
+//          ULA IMPLEMENTATION
+//=========================================
 `include "src/defines.vh"  // Inclui os defines com os códigos da ULA
 
 module ula( 

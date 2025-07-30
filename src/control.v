@@ -1,3 +1,6 @@
+//=========================================
+//            CONTROL UNIT
+//=========================================
 `include "src/defines.vh"
 
 module control(
@@ -32,15 +35,15 @@ module control(
     ExtOp    = 1;
     JalEn    = 0;
     LuiEn    = 0;
-
+//================================================
     case (opcode)
-      `MIPS_RTYPE: begin
+      `MIPS_RTYPE: begin  // R.1 a R.15
         RegDst   = 1;
         RegWrite = 1;
         ALUOp    = `ALUOP_RTYPE;
         Jr       = (funct == `FUNCT_JR) ? 1 : 0;
       end
-
+//================================================
       `MIPS_ADDI: begin   // I.1
         ALUSrc   = 1;
         RegWrite = 1;

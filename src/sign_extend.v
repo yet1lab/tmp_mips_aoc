@@ -1,3 +1,6 @@
+//=========================================
+//              SIGN EXTEND
+//=========================================
 module sign_extend(
   input [15:0] imm,     // Imediato de 16 bits
   input ExtOp,          // 1= ext.signal, 0=ext.zero

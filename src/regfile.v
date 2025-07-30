@@ -1,3 +1,6 @@
+//=========================================
+//            REGISTERS BANK
+//=========================================
 module regfile(
   input clock,
   input reset,
